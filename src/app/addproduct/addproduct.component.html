@@ -1,0 +1,88 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">   
+
+
+<div><h2>{{message}}</h2></div>
+
+<div class="container" >
+    <form [formGroup]="catalogueForm" >
+      <div class="row form-group">      
+        <div class="col-md" >
+           <label >Product Name <sup>*</sup> </label><br>
+            <input type="text" [(ngModel)]="catalogueObj.productName" formControlName="productName"  name="pname"  id="name1"   class="form-control" placeholder="Enter Product Name"  autocomplete="off">
+            
+            <div *ngIf="catalogueForm.controls.productName.touched && !catalogueForm.controls.productName.valid" class="alert alert-danger">Productname is required.</div>
+
+        </div>
+
+          <div class="col-md">
+           <label >Product Price <sup>*</sup> </label><br>
+           <input type="number"  [(ngModel)]="catalogueObj.productPrice" formControlName="productPrice" name="proprice" id="price1"   class="form-control" placeholder="Enter Price"  autocomplete="off" >
+
+           <div *ngIf="catalogueForm.controls.productPrice.touched && !catalogueForm.controls.productPrice.valid" class="alert alert-danger">Productprice is required.</div>
+
+          </div>
+
+          <div class="col-md">
+          
+            <label >Model Number <sup>*</sup></label><br>
+            <input type="text" [(ngModel)]="catalogueObj.modelNo" formControlName="modelNo" name="pmodel" id="model1"   class="form-control" placeholder="Enter Model Number" autocomplete="off" >
+            
+            <div *ngIf="catalogueForm.controls.modelNo.touched && !catalogueForm.controls.modelNo.valid" class="alert alert-danger">Modelnumber is required.</div>
+            
+          </div>
+          
+      </div>
+      <div class="row form-group">
+        <div class="col-md">
+          <label>Generic Name <sup>*</sup></label><br>
+          <input type="text" [(ngModel)]="catalogueObj.genericName" formControlName="genericName" name="pgen" id="generic1"   class="form-control" placeholder="Enter Generic Name" autocomplete="off" >
+
+          <div *ngIf="catalogueForm.controls.genericName.touched && !catalogueForm.controls.genericName.valid" class="alert alert-danger">Genericname is required.</div>
+            
+
+        </div>
+        <div class="col-md">
+          
+          <label id="txtName">Country of Origin <sup>*</sup></label>
+          <select id="country1" [(ngModel)]="catalogueObj.countryOfOrigin" formControlName="countryOfOrigin" name="pcount" class="form-control"  placeholder="Enter country" > 
+            
+            <div *ngIf="catalogueForm.controls.countryOfOrigin.touched && !catalogueForm.controls.countryOfOrigin.valid" class="alert alert-danger">Pls Choose one Country..</div>
+           
+
+            <option value=" India">India</option>
+            <option value=" USA">USA</option>
+            <option value=" Australia">Australia</option>
+            <option value=" New zealand">New zealand</option>
+            <option value=" Sweden">Sweden</option>
+            <option value=" Russia">Russia</option>
+          </select><br>
+          
+          </div> 
+          <div class="col-md">
+            <label>Choose Image Below: <sup>*</sup></label><br>
+            
+            <input #file type="file" accept='image/*'  (change)="preview(file.files); " ><br>
+            <img [src]="imgURL"  class="img-thumbnail" height="150" width="150" *ngIf="imgURL"/>
+          </div> 
+         
+      </div>
+    <input  type="button" [disabled]="catalogueForm.invalid" value="submit"  class="btn btn-primary btn-lg btn1" (click)="saveData()" />
+    
+  </form>
+</div>
+
+<footer class="footer">
+  <div class="container">
+     <div class="footerText">
+        <p class="footerText1">Designed, developed and hosted by <u>manoranjan.m@mindfiresolutions.com</u> </p>
+        <a href="https://www.facebook.com" target="_blank" class="fa fa-facebook"></a>
+        <a href="https://twitter.com/" target="_blank" class="fa fa-twitter"></a>
+        <a href="https://google.com/" target="_blank" class="fa fa-google"></a>
+        <a href="https://youtube.com/" target="_blank" class="fa fa-youtube"></a>
+        <a href="https://instagram.com/" target="_blank" class="fa fa-instagram"></a>
+     </div>
+ 
+     
+  </div>
+</footer>
+ 

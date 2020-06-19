@@ -1,0 +1,25 @@
+<div class="mainWrapper">
+  <div *ngFor = "let catalogueProduct of catalogueProduct; let i=index;">
+  <div class="galary1" >
+      
+      <div class="img1" >
+          <img [src]="imageMaps[catalogueProduct.imageName]"  alt="P Image"  name="photo"  width="260" height="100%">
+          
+        </div> 
+      <div class="content1" >
+        <label class="proName">
+          <b>{{catalogueProduct.productName}}</b>
+          
+        </label>
+        <br><button type="button" class="btn btn-info revi">4.2*</button>
+        <p class='review'>533 Ratings & 12 Reviews</p>
+     <ul>
+        <li class="input2"><b>₹</b>{{catalogueProduct.productPrice}}.00</li>
+        <li class="input2">Model No-{{catalogueProduct.modelNo}}</li>
+        <li class="input2">Generic Name-{{catalogueProduct.genericName}}</li>
+        <li class="input2">Imported from{{catalogueProduct.countryOfOrigin}}</li>
+      </ul>
+      </div>
+    </div>
+  </div>
+  </div>

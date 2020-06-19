@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');  
+*
+{
+  margin: 0;
+  padding: 0;
+  box-sizing:content-box;
+  outline: none;
+  font-family: 'Roboto', sans-serif;
+}
+body
+{
+  background:white; 
+}   
+.header
+{
+  overflow: hidden;
+  background-color: #2874f0;
+  padding:  10px;
+  color:white ;
+  text-transform: uppercase;
+  
+    
+}
+h3,#computer,a,.buttonRoute
+{   
+   display: inline;
+}
+#computer
+{
+    color: white;
+    margin-left: 10px;
+    margin-right: 4px;
+}
+
+.buttonRoute
+{
+  margin-left: 800px;
+  text-align: center;  
+}
+.btn1
+{
+  background:white;
+  text-align: center;
+  padding: 5px;
+  border-radius: 2px;
+  color:#2874f0;
+  cursor: pointer;
+  width: 10%;
+  font-size: large;
+  
+}
+
+
+
+.searchBox,.searchButton{
+display: inline;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid white;
+  margin-left: 1px;
+  width: 80%;
+  background: white;
+}
+
+.searchButton {
+  width: 5%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid gray;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}

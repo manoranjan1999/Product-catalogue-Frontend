@@ -1,0 +1,76 @@
+.galary1
+{  
+  top: 12%;
+  width: 45%;
+  display: flex;
+  margin-left: 8px;
+  margin-top: 6px;
+  margin-right: 8px;
+  height: 240px;
+  float: left;
+  background:  white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.img1
+{
+  height: 100%; 
+  margin-right: 2px;
+  border-right: 2px solid whitesmoke;
+  
+}
+
+.input2
+{
+  font-family:'Times New Roman', Times, serif;
+  font-style: oblique;
+  font-size:medium;
+}
+.content1
+{
+  
+  margin-left: 14px;
+  background: white;
+  
+  
+  
+}
+.mainWrapper
+{
+    margin-left: 85px;
+    
+}
+.proName
+{ 
+    margin-top: 10px;
+    text-transform: capitalize;
+    font-size: larger;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.input2
+{
+  font-size: larger;
+  text-align: left;
+}
+.revi,.review
+{
+  display:inline;
+}
+.revi
+{
+  background: blue;
+}
+.review
+{
+  font-size: medium;
+  padding-left: 2px;
+}
+ul
+{
+  list-style-type:square;
+  padding-top: 16px;
+  margin-left: 1px;
+}
+b
+{
+  padding-right: 3px;
+}
